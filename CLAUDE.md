@@ -91,6 +91,26 @@ C:\custom-xampp\mysql\bin\mysql.exe -u root -p
 
 Default root password is stored in `C:\custom-xampp\passwords.txt`. MariaDB data files live in `C:\custom-xampp\mysql\data\`.
 
+## Database User Management
+
+Create MySQL users and manage permissions interactively:
+
+```bash
+# Quick start (Windows)
+C:\custom-xampp\create-db-user.bat
+
+# Or direct PHP execution
+php C:\custom-xampp\tools\create-db-user.php
+```
+
+The tool provides an interactive wizard to:
+- Create new database users
+- Set passwords with confirmation
+- Grant specific permissions (SELECT, INSERT, UPDATE, DELETE, ALL)
+- Target specific databases or all databases
+
+See `tools/CREATE-DB-USER.md` for detailed documentation and examples.
+
 ## Changing the XAMPP Installation Path
 
 If you need to move XAMPP to a different location, see:

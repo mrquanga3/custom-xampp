@@ -1,0 +1,12 @@
+#!/bin/bash
+# Claude Code custom command wrapper for database user creation
+# This allows invoking the command as: /create-db-user
+
+# Detect OS and run appropriate command
+if [[ "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" ]]; then
+    # Windows
+    "C:\\custom-xampp\\php\\php.exe" "C:\\custom-xampp\\tools\\create-db-user.php"
+else
+    # Unix-like (WSL, native Linux/Mac)
+    bash "C:\\custom-xampp\\tools\\create-db-user.sh"
+fi
