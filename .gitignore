@@ -13,3 +13,5 @@ mysql/data/ibtmp1
 mysql/data/ib_buffer_pool
 mysql/data/multi-master.info
 .claude/settings.local.json
+xampp-control.log
+*.BAK

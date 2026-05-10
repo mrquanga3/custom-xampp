@@ -390,16 +390,16 @@ EnableMMAP off</code></p>
         <li>Edita el fichero apache\conf\extra\httpd-xampp.conf en tu directorio de instalación.</li>
         <li>En este fichero encuentra las siguientes líneas. 
           <p><code>
-              Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
-              &lt;Directory "C:/xampp/phpMyAdmin"&gt;
+              Alias /phpmyadmin "C:/custom-xampp/phpMyAdmin/"
+              &lt;Directory "C:/custom-xampp/phpMyAdmin"&gt;
                 AllowOverride AuthConfig
                 Require local
           </code></p>
         </li>
         <li>Reemplaza 'Require local' por 'Require all granted'.</li>
           <p><code>
-              Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
-              &lt;Directory "C:/xampp/phpMyAdmin"&gt;
+              Alias /phpmyadmin "C:/custom-xampp/phpMyAdmin/"
+              &lt;Directory "C:/custom-xampp/phpMyAdmin"&gt;
                 AllowOverride AuthConfig
                 Require all granted
           </code></p>

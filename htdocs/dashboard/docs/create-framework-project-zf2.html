@@ -129,9 +129,9 @@ This new <em>htdocs</em> directory will be the main working directory for your Z
 <p>Within the new <em>conf\</em> subdirectory, use your text editor to create and populate a file named <em>httpd-prefix.conf</em> with the following content:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Alias /myapp/ "C:/xampp/apps/myapp/htdocs/public/"
-Alias /myapp "C:/xampp/apps/myapp/htdocs/public"
-Include "C:/xampp/apps/myapp/conf/httpd-app.conf"</pre>
+<pre>Alias /myapp/ "C:/custom-xampp/apps/myapp/htdocs/public/"
+Alias /myapp "C:/custom-xampp/apps/myapp/htdocs/public"
+Include "C:/custom-xampp/apps/myapp/conf/httpd-app.conf"</pre>
 </div>
 </div>
 </li>
@@ -139,7 +139,7 @@ Include "C:/xampp/apps/myapp/conf/httpd-app.conf"</pre>
 <p>Within the <em>conf\</em> subdirectory, also create and populate a file named <em>httpd-app.conf</em> with the following content:</p>
 <div class="literalblock">
 <div class="content">
-<pre>&lt;Directory C:/xampp/apps/myapp/htdocs/public&gt;
+<pre>&lt;Directory C:/custom-xampp/apps/myapp/htdocs/public&gt;
    Options +FollowSymLinks
    AllowOverride All
    Require all granted
@@ -154,7 +154,7 @@ Include "C:/xampp/apps/myapp/conf/httpd-app.conf"</pre>
 <p>Edit the <em>httpd-xampp.conf</em> file in the <em>apache\conf\extra\</em> subdirectory of your XAMPP installation directory and add the following line at the end to include the <em>httpd-prefix.conf</em> file created earlier.</p>
 <div class="literalblock">
 <div class="content">
-<pre>Include "C:/xampp/apps/myapp/conf/httpd-prefix.conf"</pre>
+<pre>Include "C:/custom-xampp/apps/myapp/conf/httpd-prefix.conf"</pre>
 </div>
 </div>
 <div class="admonitionblock note">

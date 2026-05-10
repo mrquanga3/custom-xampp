@@ -15,9 +15,9 @@ if ( -d 'D:\\xampp\\minicpan' ) {
   eval { require LWP::Online; };
   unless ( $@ ) {
     if ( LWP::Online::online() ) {
-      push @urllist, q[file:///D:/xampp/minicpan/];
+      push @urllist, q[file:///C:/custom-xampp/minicpan/];
     } else {
-      unshift @urllist, q[file:///D:/xampp/minicpan/];
+      unshift @urllist, q[file:///C:/custom-xampp/minicpan/];
     }
   }
 }

@@ -45,7 +45,7 @@ xampp_stop.bat
 
 ## Web Root and Projects
 
-Default DocumentRoot: `D:/xampp/htdocs`
+Default DocumentRoot: `C:/custom-xampp/htdocs`
 
 Custom projects currently in `htdocs\`:
 - `opencart1/` — OpenCart e-commerce installation
