@@ -99,24 +99,41 @@ Create MySQL users and manage permissions interactively using the registered ski
 /create-db-user
 ```
 
+Update an existing user's permissions and access:
+
+```
+/update-db-user
+```
+
 **Or from command line:**
 ```bash
 # Windows batch script
 C:\custom-xampp\create-db-user.bat
+C:\custom-xampp\update-db-user.bat
 
 # Via PHP CLI
 php C:\custom-xampp\tools\create-db-user.php
+php C:\custom-xampp\tools\update-db-user.php
 ```
 
-**The tool provides:**
+**create-db-user provides:**
 - Interactive wizard to create new database users
 - Password entry with confirmation
+- Access level selection (local only / anywhere / custom host)
 - Preset permission levels (SELECT, INSERT, UPDATE, DELETE, ALL)
 - Database selection (specific or all databases)
 - Input validation and confirmation before execution
 
+**update-db-user provides:**
+- Lists all existing MySQL users with their current access level
+- Shows current grants before making changes
+- Change access level (local ↔ anywhere ↔ custom host)
+- Replace permissions with new selection
+- Before/after summary before applying
+
 **Documentation:**
 - `.claude/commands/create-db-user.md` — Slash command definition
+- `.claude/commands/update-db-user.md` — Slash command definition
 - `tools/CREATE-DB-USER.md` — Complete guide with examples
 - `QUICKSTART-DB-USER.txt` — Quick reference
 - `.claude/SETUP-ALIASES.md` — Shell alias setup

@@ -249,9 +249,25 @@ while (!validateUsername($username)) {
     $username = readInput("Enter new username");
 }
 
-$host = readInput("Enter host", "localhost");
-if (empty($host)) {
-    $host = "localhost";
+// Host / access selection
+echo "\n";
+printInfo("Select access level:");
+echo "  1. Local only (localhost) — recommended for web apps on this server\n";
+echo "  2. Anywhere (%) — allows remote connections from any host\n";
+echo "  3. Custom host or IP address\n";
+
+$host_choice = readInput("Choose option", "1");
+switch ($host_choice) {
+    case '2':
+        $host = '%';
+        printWarning("User will be accessible from ANY host — use a strong password!");
+        break;
+    case '3':
+        $host = readInput("Enter host or IP (e.g. 192.168.1.10)");
+        if (empty($host)) $host = 'localhost';
+        break;
+    default:
+        $host = 'localhost';
 }
 
 // Check if user already exists
