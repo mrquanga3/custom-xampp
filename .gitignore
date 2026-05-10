@@ -1,2 +1,15 @@
 storage1/
 tmp/ib74FF.tmp
+tmp/
+mysql/backup/
+apache/logs/
+mysql/data/kanboard/
+mysql/data/opencart/oc_cart.frm
+mysql/data/opencart/
+mysql/data/testlink/
+mysql/data/tcexam/
+mysql/data/aria_log*
+mysql/data/ibtmp1
+mysql/data/ib_buffer_pool
+mysql/data/multi-master.info
+.claude/settings.local.json
