@@ -90,3 +90,18 @@ C:\custom-xampp\mysql\bin\mysql.exe -u root -p
 ```
 
 Default root password is stored in `C:\custom-xampp\passwords.txt`. MariaDB data files live in `C:\custom-xampp\mysql\data\`.
+
+## Changing the XAMPP Installation Path
+
+If you need to move XAMPP to a different location, see:
+- **SKILL.md** — Technical reference for configuration file updates (for AI/Claude)
+- **README.md** — User-friendly step-by-step guide
+
+**Key files requiring path updates:**
+- `apache/conf/httpd.conf` and `apache/conf/extra/*.conf`
+- `mysql/bin/my.ini`
+- `php/php.ini`
+- `xampp-control.ini`
+- Dashboard documentation files in `htdocs/dashboard/`
+
+Use find & replace to update `C:\custom-xampp` to the new path in all `.conf`, `.ini`, and `.html` files.
