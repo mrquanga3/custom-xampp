@@ -59,6 +59,108 @@ C:\custom-xampp\xampp_stop.bat
 
 ---
 
+## Claude Code Commands
+
+This XAMPP installation includes custom commands for Claude Code (AI assistant) to help with common tasks.
+
+### Create Database User
+
+Create MySQL users and grant permissions interactively.
+
+**Usage from Claude Code:**
+```bash
+# Run the command
+C:\custom-xampp\create-db-user.bat
+```
+
+Or directly from command line:
+```bash
+# Windows Command Prompt / PowerShell
+C:\custom-xampp\create-db-user.bat
+
+# Via PHP
+php C:\custom-xampp\tools\create-db-user.php
+
+# WSL / Git Bash
+bash C:\custom-xampp\tools\create-db-user.sh
+```
+
+**What It Does:**
+- Creates new MySQL database users
+- Prompts for username, password, host
+- Grants specific permissions (SELECT, INSERT, UPDATE, DELETE, ALL)
+- Assigns user to database(s)
+- Validates inputs and confirms before execution
+
+**Quick Example:**
+```
+1. Run: C:\custom-xampp\create-db-user.bat
+2. Username: myapp_user
+3. Host: localhost (press Enter)
+4. Password: ••••••••
+5. Confirm: ••••••••
+6. Permissions: 2 (SELECT, INSERT, UPDATE, DELETE)
+7. Database: Select your database
+8. Confirm: y
+
+✓ User created with full data modification rights
+```
+
+**Detailed Documentation:**
+See `QUICKSTART-DB-USER.txt` for quick reference or `tools/CREATE-DB-USER.md` for comprehensive guide with examples and troubleshooting.
+
+### Using Commands with Claude Code
+
+**What is Claude Code?**
+
+Claude Code is an AI assistant that integrates with your IDE (VS Code, JetBrains, or web interface). It can execute commands, edit files, and run tests to help automate development tasks.
+
+**How to Ask Claude Code to Create a User:**
+
+1. **Open Claude Code** in your IDE or at `claude.ai/code`
+
+2. **Request a user creation:**
+   ```
+   Please create a MySQL user named 'webapp_user' for the 'myapp' 
+   database with full data modification permissions
+   ```
+
+3. **Claude will:**
+   - Recognize the XAMPP environment from `CLAUDE.md`
+   - Run the `create-db-user` command
+   - Follow the interactive prompts
+   - Report success with connection details
+
+**Example Interaction:**
+
+```
+User: Create a MySQL user called 'api_user' for database 'api_db' 
+with SELECT and INSERT permissions
+
+Claude: I'll create that user for you...
+[Runs: C:\custom-xampp\create-db-user.bat]
+[Provides username, password, selects permissions, confirms]
+
+✓ User 'api_user'@'localhost' created successfully
+
+Connection details:
+  Host: localhost
+  Username: api_user
+  Password: [generated-secure-password]
+  Database: api_db
+  Permissions: SELECT, INSERT
+```
+
+**Why Use Claude for This?**
+
+- ✅ No manual command typing or menu navigation
+- ✅ Automatic validation and error handling
+- ✅ Detailed documentation reference in `CLAUDE.md`
+- ✅ Quick integration into development workflows
+- ✅ Consistent permission management across projects
+
+---
+
 ## Configuration
 
 ### Apache Configuration Files
@@ -308,8 +410,143 @@ Then restart Apache.
 
 ---
 
+## Available Tools and Scripts
+
+### Batch Scripts (Windows)
+
+These scripts help manage XAMPP services:
+
+| Script | Purpose | Location |
+|--------|---------|----------|
+| `xampp_start.bat` | Start all services (Apache, MySQL) | `C:\custom-xampp\xampp_start.bat` |
+| `xampp_stop.bat` | Stop all services | `C:\custom-xampp\xampp_stop.bat` |
+| `apache_start.bat` | Start Apache only | `C:\custom-xampp\apache_start.bat` |
+| `apache_stop.bat` | Stop Apache only | `C:\custom-xampp\apache_stop.bat` |
+| `mysql_start.bat` | Start MariaDB only | `C:\custom-xampp\mysql_start.bat` |
+| `mysql_stop.bat` | Stop MariaDB only | `C:\custom-xampp\mysql_stop.bat` |
+| `create-db-user.bat` | Create MySQL user and grant permissions | `C:\custom-xampp\create-db-user.bat` |
+
+### PHP Scripts (In `tools/` directory)
+
+These PHP scripts provide functionality that can be invoked from Claude Code or command line:
+
+| Script | Purpose | Location |
+|--------|---------|----------|
+| `create-db-user.php` | Interactive database user creation | `C:\custom-xampp\tools\create-db-user.php` |
+
+### Documentation
+
+| File | Purpose |
+|------|---------|
+| `CLAUDE.md` | AI/Claude Code environment documentation |
+| `README.md` | This file - user guide |
+| `SKILL.md` | Technical reference for XAMPP configuration |
+| `QUICKSTART-DB-USER.txt` | Quick reference card for user creation |
+| `tools/CREATE-DB-USER.md` | Complete guide with examples and troubleshooting |
+
+---
+
+## Asking Claude Code for Help
+
+### Common Requests
+
+**"Create a new database user"**
+```
+Please create a MySQL user for [username] with access to [database]
+Permissions: [SELECT/INSERT/UPDATE/DELETE/ALL]
+```
+
+**"Set up a new project"**
+```
+Help me set up a new PHP project called [projectname] with:
+- Database user
+- Virtual host or alias
+- Initial database structure
+```
+
+**"Check database permissions"**
+```
+Show me what permissions user [username] has on [database]
+```
+
+**"List all database users"**
+```
+Show me all MySQL users and their hosts
+```
+
+### Tips for Better Results
+
+1. **Be specific** — Include database names, usernames, and required permissions
+2. **Mention constraints** — Network access, security requirements, performance needs
+3. **Reference documentation** — Ask Claude to check `CLAUDE.md` or `SKILL.md`
+4. **Confirm before executing** — Ask Claude to review the plan before running commands
+5. **Test after creation** — Ask Claude to verify new users with phpMyAdmin or CLI
+
+### What Claude Can Help With
+
+✅ Create and manage database users  
+✅ Set up virtual hosts or aliases  
+✅ Configure Apache and MySQL settings  
+✅ Troubleshoot connection issues  
+✅ Optimize performance  
+✅ Migrate XAMPP to different locations  
+✅ Document your setup  
+
+---
+
+## Troubleshooting with Claude Code
+
+If something doesn't work:
+
+1. **Ask Claude to diagnose:**
+   ```
+   MySQL won't start - what's wrong?
+   Check the error log and help me fix it
+   ```
+
+2. **Claude will:**
+   - Check error logs
+   - Verify service status
+   - Review configuration files
+   - Suggest and implement fixes
+
+3. **Check logs directly if needed:**
+   ```
+   Apache errors: C:\custom-xampp\apache\logs\error.log
+   MySQL errors: C:\custom-xampp\mysql\data\mysql_error.log
+   ```
+
+---
+
 ## Support
 
-For XAMPP documentation, see: `C:\custom-xampp\htdocs\dashboard/`
+**For XAMPP-specific help:**
+- XAMPP dashboard: `http://localhost/`
+- XAMPP documentation: `C:\custom-xampp\htdocs\dashboard/`
 
-For configuration help, consult the CLAUDE.md file (for AI) or check Apache/MySQL official documentation.
+**For configuration details:**
+- AI/Claude reference: `CLAUDE.md`
+- Technical details: `SKILL.md`
+- User guide: This `README.md`
+
+**For command-specific help:**
+- Database user creation: `tools/CREATE-DB-USER.md`
+- Quick reference: `QUICKSTART-DB-USER.txt`
+
+**For official documentation:**
+- Apache: https://httpd.apache.org/docs/
+- MySQL/MariaDB: https://dev.mysql.com/doc/ or https://mariadb.com/docs/
+- PHP: https://www.php.net/docs.php
+- phpMyAdmin: https://www.phpmyadmin.net/
+
+---
+
+## Next Steps
+
+1. **Start XAMPP** — Run `xampp_start.bat` or use Control Panel
+2. **Access phpMyAdmin** — Visit `http://localhost/phpmyadmin`
+3. **Create first user** — Run `create-db-user.bat` or ask Claude Code
+4. **Set up a project** — Add alias or virtual host (see "Adding a New Site")
+5. **Test connection** — Verify user can access database from your app
+
+Enjoy! 🚀
