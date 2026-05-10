@@ -93,23 +93,33 @@ Default root password is stored in `C:\custom-xampp\passwords.txt`. MariaDB data
 
 ## Database User Management
 
-Create MySQL users and manage permissions interactively:
+Create MySQL users and manage permissions interactively using the registered skill:
 
+```
+/create-db-user
+```
+
+**Or from command line:**
 ```bash
-# Quick start (Windows)
+# Windows batch script
 C:\custom-xampp\create-db-user.bat
 
-# Or direct PHP execution
+# Via PHP CLI
 php C:\custom-xampp\tools\create-db-user.php
 ```
 
-The tool provides an interactive wizard to:
-- Create new database users
-- Set passwords with confirmation
-- Grant specific permissions (SELECT, INSERT, UPDATE, DELETE, ALL)
-- Target specific databases or all databases
+**The tool provides:**
+- Interactive wizard to create new database users
+- Password entry with confirmation
+- Preset permission levels (SELECT, INSERT, UPDATE, DELETE, ALL)
+- Database selection (specific or all databases)
+- Input validation and confirmation before execution
 
-See `tools/CREATE-DB-USER.md` for detailed documentation and examples.
+**Documentation:**
+- `.claude/skills/create-db-user.md` — Skill definition
+- `tools/CREATE-DB-USER.md` — Complete guide with examples
+- `QUICKSTART-DB-USER.txt` — Quick reference
+- `.claude/SETUP-ALIASES.md` — Shell alias setup
 
 ## Changing the XAMPP Installation Path
 

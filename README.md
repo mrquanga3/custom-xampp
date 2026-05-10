@@ -67,13 +67,19 @@ This XAMPP installation includes custom commands for Claude Code (AI assistant) 
 
 Create MySQL users and grant permissions interactively.
 
-**Usage from Claude Code:**
-```bash
-# Run the command
-C:\custom-xampp\create-db-user.bat
+**Usage from Claude Code (Recommended):**
+```
+/create-db-user
 ```
 
-Or directly from command line:
+Just type the slash command and Claude Code will guide you through the interactive wizard!
+
+**Or ask Claude directly:**
+```
+"Create a MySQL user named 'myapp_user' for database 'mydb' with full data modification permissions"
+```
+
+**Usage from command line:**
 ```bash
 # Windows Command Prompt / PowerShell
 C:\custom-xampp\create-db-user.bat
@@ -85,16 +91,25 @@ php C:\custom-xampp\tools\create-db-user.php
 bash C:\custom-xampp\tools\create-db-user.sh
 ```
 
+Or use shell aliases (after setup):
+```powershell
+# PowerShell
+create-db-user
+createuser
+new-db-user
+adduser
+```
+
 **What It Does:**
-- Creates new MySQL database users
-- Prompts for username, password, host
-- Grants specific permissions (SELECT, INSERT, UPDATE, DELETE, ALL)
-- Assigns user to database(s)
-- Validates inputs and confirms before execution
+- ✅ Creates new MySQL database users
+- ✅ Prompts for username, password, host
+- ✅ Grants specific permissions (SELECT, INSERT, UPDATE, DELETE, ALL)
+- ✅ Assigns user to database(s)
+- ✅ Validates inputs and confirms before execution
 
 **Quick Example:**
 ```
-1. Run: C:\custom-xampp\create-db-user.bat
+1. Run: /create-db-user
 2. Username: myapp_user
 3. Host: localhost (press Enter)
 4. Password: ••••••••
@@ -106,8 +121,10 @@ bash C:\custom-xampp\tools\create-db-user.sh
 ✓ User created with full data modification rights
 ```
 
-**Detailed Documentation:**
-See `QUICKSTART-DB-USER.txt` for quick reference or `tools/CREATE-DB-USER.md` for comprehensive guide with examples and troubleshooting.
+**Documentation:**
+- `QUICKSTART-DB-USER.txt` — Quick reference
+- `tools/CREATE-DB-USER.md` — Comprehensive guide with examples
+- `.claude/SETUP-ALIASES.md` — Shell alias setup instructions
 
 ### Using Commands with Claude Code
 
@@ -412,6 +429,17 @@ Then restart Apache.
 
 ## Available Tools and Scripts
 
+### Claude Code Skills (Slash Commands)
+
+These are registered as `/` commands in Claude Code:
+
+| Command | Purpose |
+|---------|---------|
+| `/setup-xampp` | Setup XAMPP (Windows) |
+| `/create-db-user` | Create MySQL user and grant permissions |
+
+Just type the slash command in Claude Code and follow the prompts!
+
 ### Batch Scripts (Windows)
 
 These scripts help manage XAMPP services:
@@ -448,7 +476,16 @@ These PHP scripts provide functionality that can be invoked from Claude Code or 
 
 ## Asking Claude Code for Help
 
-### Common Requests
+### Using Slash Commands
+
+**Create a database user:**
+```
+/create-db-user
+```
+
+Then follow the interactive prompts to set up your user.
+
+### Common Chat Requests
 
 **"Create a new database user"**
 ```

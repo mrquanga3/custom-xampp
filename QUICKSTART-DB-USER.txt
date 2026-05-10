@@ -2,10 +2,16 @@
 ║                   DATABASE USER CREATION - QUICK START                      ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 
-COMMAND:
+SLASH COMMAND (Recommended):
+  /create-db-user
+
+Or in Claude Code chat:
+  "Create a MySQL user named..."
+
+Or from command line:
   C:\custom-xampp\create-db-user.bat
 
-Or:
+Or via PHP:
   php C:\custom-xampp\tools\create-db-user.php
 
 WHAT IT DOES:
@@ -17,14 +23,19 @@ WHAT IT DOES:
   ✓ Confirms before executing
 
 QUICK EXAMPLE:
-  1. Run: C:\custom-xampp\create-db-user.bat
-  2. Enter username: myapp_user
-  3. Enter host: localhost (press Enter for default)
-  4. Enter password: ••••••••
-  5. Confirm password: ••••••••
-  6. Choose permissions: 2 (SELECT, INSERT, UPDATE, DELETE)
-  7. Choose database: 0 (All databases) or select specific
-  8. Confirm: y (yes)
+  Via Slash Command:
+    1. Type: /create-db-user
+    2. Follow interactive prompts
+
+  Via Command Line:
+    1. Run: C:\custom-xampp\create-db-user.bat
+    2. Enter username: myapp_user
+    3. Enter host: localhost (press Enter for default)
+    4. Enter password: ••••••••
+    5. Confirm password: ••••••••
+    6. Choose permissions: 2 (SELECT, INSERT, UPDATE, DELETE)
+    7. Choose database: 0 (All databases) or select specific
+    8. Confirm: y (yes)
 
 RESULT:
   User 'myapp_user'@'localhost' created with full data modification rights
@@ -38,14 +49,20 @@ TESTING THE NEW USER:
   (then enter the password you created)
 
 DOCUMENTATION:
-  See: C:\custom-xampp\tools\CREATE-DB-USER.md
-  For: Step-by-step guide, examples, troubleshooting
+  Quick Reference: C:\custom-xampp\QUICKSTART-DB-USER.txt (this file)
+  Complete Guide: C:\custom-xampp\tools\CREATE-DB-USER.md
+  Alias Setup: C:\custom-xampp\.claude\SETUP-ALIASES.md
+  Claude Docs: C:\custom-xampp\CLAUDE.md
+  User Guide: C:\custom-xampp\README.md
+
+REGISTERED SKILL:
+  .claude/skills/create-db-user.md → Slash command definition (/create-db-user)
 
 FILES:
   create-db-user.bat           → Windows batch wrapper (double-click to run)
   tools/create-db-user.php     → Main PHP script
   tools/create-db-user.sh      → Unix/WSL shell wrapper
-  tools/CREATE-DB-USER.md      → Full documentation
-  .claude/scripts/create-db-user → Claude Code command
+  .claude/aliases.ps1          → PowerShell aliases
+  .claude/aliases.sh           → Bash/WSL aliases
 
 ═══════════════════════════════════════════════════════════════════════════════
