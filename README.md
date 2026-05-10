@@ -433,12 +433,14 @@ Then restart Apache.
 
 These are registered as `/` commands in Claude Code:
 
-| Command | Purpose |
-|---------|---------|
-| `/setup-xampp` | Setup XAMPP (Windows) |
-| `/create-db-user` | Create MySQL user and grant permissions |
+| Command | Source file | Purpose |
+|---------|------------|---------|
+| `/setup-xampp` | `.claude/commands/setup-xampp.md` | Setup XAMPP (Windows) |
+| `/create-db-user` | `.claude/commands/create-db-user.md` | Create MySQL user and grant permissions |
 
 Just type the slash command in Claude Code and follow the prompts!
+
+> **How it works:** Any `.md` file placed in `.claude/commands/` automatically becomes a `/command` in Claude Code's palette. The filename (without `.md`) is the command name.
 
 ### Batch Scripts (Windows)
 

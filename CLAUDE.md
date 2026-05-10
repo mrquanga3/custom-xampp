@@ -116,10 +116,13 @@ php C:\custom-xampp\tools\create-db-user.php
 - Input validation and confirmation before execution
 
 **Documentation:**
-- `.claude/skills/create-db-user.md` — Skill definition
+- `.claude/commands/create-db-user.md` — Slash command definition
 - `tools/CREATE-DB-USER.md` — Complete guide with examples
 - `QUICKSTART-DB-USER.txt` — Quick reference
 - `.claude/SETUP-ALIASES.md` — Shell alias setup
+
+**How custom commands work:**
+Place `.md` files in `.claude/commands/` — the filename becomes the `/command` name in Claude Code's palette.
 
 ## Changing the XAMPP Installation Path
 

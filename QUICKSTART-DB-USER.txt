@@ -55,8 +55,9 @@ DOCUMENTATION:
   Claude Docs: C:\custom-xampp\CLAUDE.md
   User Guide: C:\custom-xampp\README.md
 
-REGISTERED SKILL:
-  .claude/skills/create-db-user.md → Slash command definition (/create-db-user)
+REGISTERED COMMAND:
+  .claude/commands/create-db-user.md → Slash command definition (/create-db-user)
+  (any .md file in .claude/commands/ becomes a /command in Claude Code)
 
 FILES:
   create-db-user.bat           → Windows batch wrapper (double-click to run)
