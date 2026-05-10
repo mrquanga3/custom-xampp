@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Test-Path \"c:\\\\custom-xampp\\\\SKILL.md\")",
+      "Bash(php C:\\\\custom-xampp\\\\tools\\\\create-db-user.php -v)",
+      "Bash(C:\\\\custom-xampp\\\\create-db-user.bat)",
+      "Bash(php C:\\\\custom-xampp\\\\tools\\\\create-db-user.php)"
+    ]
+  }
+}
