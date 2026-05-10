@@ -11,9 +11,9 @@
 @if %ErrorLevel% == 9009 @echo You do not have Perl in your PATH.
 @goto endofperl
 @rem ';
-#!D:\xampp\perl\bin\perl.exe 
+#!C:\custom-xampp\perl\bin\perl.exe 
 #line 30
-    eval 'exec D:\xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
+    eval 'exec C:\custom-xampp\perl\bin\perl.exe -S $0 ${1+"$@"}'
 	if $running_under_some_shell;
 
 # pod2latex conversion program

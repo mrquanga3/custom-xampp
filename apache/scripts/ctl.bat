@@ -2,17 +2,17 @@
 
 if not ""%1"" == ""START"" goto stop
 
-cmd.exe /C start /B /MIN "" "D:\xampp\apache\bin\httpd.exe"
+cmd.exe /C start /B /MIN "" "C:\custom-xampp\apache\bin\httpd.exe"
 
 if errorlevel 255 goto finish
 if errorlevel 1 goto error
 goto finish
 
 :stop
-cmd.exe /C start "" /MIN call "D:\xampp\killprocess.bat" "httpd.exe"
+cmd.exe /C start "" /MIN call "C:\custom-xampp\killprocess.bat" "httpd.exe"
 
-if not exist "D:\xampp\apache\logs\httpd.pid" GOTO finish
-del "D:\xampp\apache\logs\httpd.pid"
+if not exist "C:\custom-xampp\apache\logs\httpd.pid" GOTO finish
+del "C:\custom-xampp\apache\logs\httpd.pid"
 goto finish
 
 :error

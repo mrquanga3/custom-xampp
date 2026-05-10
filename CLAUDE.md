@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Environment
 
-XAMPP 8.2.12 installed at `D:\xampp` (non-default drive).
+XAMPP 8.2.12 installed at `C:\custom-xampp` (non-default drive).
 
 | Component | Version |
 |-----------|---------|
@@ -17,7 +17,7 @@ Active modules: **Apache** and **MySQL** only. FileZilla, Mercury, and Tomcat ar
 
 ## Starting and Stopping Services
 
-Use the XAMPP Control Panel (`xampp-control.exe`) or the batch scripts at `D:\xampp\`:
+Use the XAMPP Control Panel (`xampp-control.exe`) or the batch scripts at `C:\custom-xampp\`:
 
 ```bat
 # Start/stop individual services
@@ -75,18 +75,18 @@ Always quote paths containing spaces in Apache config.
 
 Run PHP CLI directly:
 ```bat
-D:\xampp\php\php.exe script.php
-D:\xampp\php\php.exe -l script.php   # syntax check
-D:\xampp\php\php.exe -S localhost:8080 -t public/   # built-in server
+C:\custom-xampp\php\php.exe script.php
+C:\custom-xampp\php\php.exe -l script.php   # syntax check
+C:\custom-xampp\php\php.exe -S localhost:8080 -t public/   # built-in server
 ```
 
-Composer (if needed) should be run via `D:\xampp\php\php.exe composer.phar`.
+Composer (if needed) should be run via `C:\custom-xampp\php\php.exe composer.phar`.
 
 ## Database
 
 Connect via phpMyAdmin (`http://localhost/phpmyadmin`) or CLI:
 ```bat
-D:\xampp\mysql\bin\mysql.exe -u root -p
+C:\custom-xampp\mysql\bin\mysql.exe -u root -p
 ```
 
-Default root password is stored in `D:\xampp\passwords.txt`. MariaDB data files live in `D:\xampp\mysql\data\`.
+Default root password is stored in `C:\custom-xampp\passwords.txt`. MariaDB data files live in `C:\custom-xampp\mysql\data\`.
