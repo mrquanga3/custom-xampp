@@ -1,0 +1,51 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                   DATABASE USER CREATION - QUICK START                      ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+COMMAND:
+  C:\custom-xampp\create-db-user.bat
+
+Or:
+  php C:\custom-xampp\tools\create-db-user.php
+
+WHAT IT DOES:
+  ✓ Creates new MySQL users
+  ✓ Prompts for username, password, host
+  ✓ Grants permissions (SELECT, INSERT, UPDATE, DELETE, or ALL)
+  ✓ Assigns to specific database(s)
+  ✓ Validates all inputs
+  ✓ Confirms before executing
+
+QUICK EXAMPLE:
+  1. Run: C:\custom-xampp\create-db-user.bat
+  2. Enter username: myapp_user
+  3. Enter host: localhost (press Enter for default)
+  4. Enter password: ••••••••
+  5. Confirm password: ••••••••
+  6. Choose permissions: 2 (SELECT, INSERT, UPDATE, DELETE)
+  7. Choose database: 0 (All databases) or select specific
+  8. Confirm: y (yes)
+
+RESULT:
+  User 'myapp_user'@'localhost' created with full data modification rights
+
+REQUIREMENTS:
+  ✓ MySQL must be running (start from XAMPP Control Panel)
+  ✓ Root access to MySQL (uses default empty password)
+
+TESTING THE NEW USER:
+  mysql.exe -u myapp_user -p mydb
+  (then enter the password you created)
+
+DOCUMENTATION:
+  See: C:\custom-xampp\tools\CREATE-DB-USER.md
+  For: Step-by-step guide, examples, troubleshooting
+
+FILES:
+  create-db-user.bat           → Windows batch wrapper (double-click to run)
+  tools/create-db-user.php     → Main PHP script
+  tools/create-db-user.sh      → Unix/WSL shell wrapper
+  tools/CREATE-DB-USER.md      → Full documentation
+  .claude/scripts/create-db-user → Claude Code command
+
+═══════════════════════════════════════════════════════════════════════════════
