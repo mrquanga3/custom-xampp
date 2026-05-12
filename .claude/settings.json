@@ -4,7 +4,9 @@
       "Bash(Test-Path \"c:\\\\custom-xampp\\\\SKILL.md\")",
       "Bash(php C:\\\\custom-xampp\\\\tools\\\\create-db-user.php -v)",
       "Bash(C:\\\\custom-xampp\\\\create-db-user.bat)",
-      "Bash(php C:\\\\custom-xampp\\\\tools\\\\create-db-user.php)"
+      "Bash(php C:\\\\custom-xampp\\\\tools\\\\create-db-user.php)",
+      "Bash(ls ~/.claude/skills/ 2>/dev/null || echo \"not found\")",
+      "Read(//c/Users/ADMIN/.claude/**)",
     ]
   }
 }

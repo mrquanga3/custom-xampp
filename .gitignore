@@ -15,3 +15,4 @@ mysql/data/multi-master.info
 .claude/settings.local.json
 xampp-control.log
 *.BAK
+mysql/data/mysql_error.log
